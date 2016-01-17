@@ -11,6 +11,9 @@ cp -v vimrc.plugins ~/.vim/vimrc.plugins
 if [[ -d '~/.vim' ]]; then
   mv -f ~/.vim ~/.vim.previous
 fi
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
+
+# Install Neobundle
+mkdir -p ~/.vim/bundle && git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
 # Install Plugins
-vim +PluginInstall +qall
+vim +NeoBundleInstall +qall
