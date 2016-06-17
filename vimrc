@@ -12,6 +12,7 @@ set number				                    " Enable number field for every file
 set rnu					                      " Relative line numbers
 " set spell				                    " enable spellchecker 
 set hidden
+set paste  
 
 " String optoins
 set encoding=utf-8       		          " Set encoding to Unicode
@@ -48,4 +49,5 @@ colorscheme koehler
 syntax on 				" Enable collor scheme for appropriate type of file 
 
 " Add external configuration files
-source ~/.vim/vimrc.plugins
+" source ~/.vim/vimrc.plugins
+source ~/.vim/vimrc.neovim
