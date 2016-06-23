@@ -14,6 +14,6 @@ cp -v vimrc ~/.vim/vimrc
 cp -v vimrc.neovim ~/.vim/vimrc.neovim
 
 # Install vim modules
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-# Install Plugins
-vim +NeoBundleInstall
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall

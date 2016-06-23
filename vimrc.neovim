@@ -6,51 +6,46 @@
      set nocompatible               " Be iMproved
    endif
 
-   " Required:
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
  endif
 
  " Required:
- call neobundle#begin(expand('~/.vim/bundle/'))
-
- " Let NeoBundle manage NeoBundle
- " Required:
- NeoBundleFetch 'Shougo/neobundle.vim'
+ call plug#begin(expand('~/.vim/bundle/'))
 
  " My Bundles here:
- " Refer to |:NeoBundle-examples|.
- " Note: You don't set neobundle setting in .gvimrc!
 
- " My Bundle here
- NeoBundle "MarcWeber/vim-addon-mw-utils"
- NeoBundle "tomtom/tlib_vim"
- NeoBundle "garbas/vim-snipmate"
+ " MY BUNDLE HERE
+
  " Visual effects 
- NeoBundle "vim-airline/vim-airline"
- NeoBundle "vim-airline/vim-airline-themes"
- NeoBundle "syntastic"
- NeoBundle "Tagbar"
- NeoBundle "fatih/vim-go"
- if has('lua')
-   NeoBundle "Shougo/neocomplete"
-   NeoBundle "Shougo/neosnippet"
-   NeoBundle "Shougo/neosnippet-snippets"
- end
- NeoBundle "kien/ctrlp.vim"
- NeoBundle "t9md/vim-chef"
- NeoBundle "tpope/vim-fugitive"
- NeoBundle "gregsexton/gitv"
- NeoBundle "elzr/vim-json"
- NeoBundle "knt45/jq-wrapper.vim"
+ Plug 'vim-airline/vim-airline'
+ Plug 'vim-airline/vim-airline-themes'
+ 
+ " Syntax validation  
+ Plug 'neomake/neomake'
 
-  call neobundle#end()
+ " Tagbar 
+ Plug 'Tagbar'
+
+ " DSL and Programing languages
+ Plug 'fatih/vim-go'
+ Plug 't9md/vim-chef'
+
+ " IDE: Completion Functionality  
+
+ " Git utilities 
+ Plug 'gregsexton/gitv' | Plug 'tpope/vim-fugitive'
+
+ " JSON Tool
+ Plug 'elzr/vim-json'
+ Plug 'knt45/jq-wrapper.vim'
+
+  call plug#end()
  
   " Required:
   filetype plugin indent on
  
  " BUNDLE CONFIGURATION
  
- " Add powerline: vim-airline
+ " vim-airline
  set laststatus=2
  let g:airline_theme='badwolf'
  let g:airline_detect_modified=1
@@ -66,9 +61,5 @@
   let g:airline#extensions#tabline#left_sep = ' '
   let g:airline#extensions#tabline#left_alt_sep = '|'
  
- " Toggle tagbar 
+ " Tagbar: Toggle tagbar 
  nmap <F8> :TagbarToggle<CR>
-
- " If there are uninstalled bundles found on startup,
- " this will conveniently prompt you to install them.
- NeoBundleCheck
