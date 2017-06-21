@@ -10,7 +10,7 @@ call plug#begin(expand('~/.vim/bundle/'))
 " Visual effects 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'tomasr/molokai'
 
 " NerdTree
 Plug 'scrooloose/nerdtree',  { 'on':  'NERDTreeToggle' }
@@ -33,6 +33,7 @@ Plug 'elzr/vim-json', {'for' : 'json'}
 Plug 'fatih/vim-hclfmt'
 Plug 'fatih/vim-nginx' , {'for' : 'nginx'}
 Plug 'hashivim/vim-hashicorp-tools'
+Plug 'vim-scripts/c.vim'
 
 " Git utilities 
 Plug 'gregsexton/gitv' | Plug 'tpope/vim-fugitive'
@@ -91,8 +92,8 @@ endif
 filetype plugin indent on
  
 " BUNDLE CONFIGURATION
-colorscheme PaperColor
-set background=dark
+" colorscheme molokai
+" set background
 
 " vim-airline
 set laststatus=2
