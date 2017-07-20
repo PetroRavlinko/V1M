@@ -34,6 +34,7 @@ Plug 'fatih/vim-hclfmt'
 Plug 'fatih/vim-nginx' , {'for' : 'nginx'}
 Plug 'hashivim/vim-hashicorp-tools'
 Plug 'vim-scripts/c.vim'
+Plug 'mattn/emmet-vim/'
 
 " Git utilities 
 Plug 'gregsexton/gitv' | Plug 'tpope/vim-fugitive'
@@ -92,12 +93,15 @@ endif
 filetype plugin indent on
  
 " BUNDLE CONFIGURATION
-" colorscheme molokai
+colorscheme molokai
+" colorscheme onehalflight
+" hi light
 " set background
 
 " vim-airline
 set laststatus=2
-let g:airline_theme='badwolf'
+" let g:airline_theme='badwolf'
+let g:airline_theme='molokai'
 let g:airline_detect_modified=1
  if !exists('g:airline_symbols')
    let g:airline_symbols = {}
