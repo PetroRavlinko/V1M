@@ -94,7 +94,7 @@ endif
 filetype plugin indent on
  
 " BUNDLE CONFIGURATION
-colorscheme molokai
+" colorscheme molokai
 " colorscheme onehalflight
 " hi light
 " set background
@@ -102,7 +102,7 @@ colorscheme molokai
 " vim-airline
 set laststatus=2
 " let g:airline_theme='badwolf'
-" let g:airline_theme='molokai'
+let g:airline_theme='molokai'
 let g:airline_detect_modified=1
  if !exists('g:airline_symbols')
    let g:airline_symbols = {}
