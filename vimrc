@@ -13,7 +13,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
 
 " NerdTree
-Plug 'scrooloose/nerdtree',  { 'on':  'NERDTreeToggle' }
+" Plug 'scrooloose/nerdtree',  { 'on':  'NERDTreeToggle' }
+Plug 'Shougo/denite.nvim'
 
 " Syntax validation  
 Plug 'scrooloose/syntastic'
@@ -22,7 +23,7 @@ Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " Tagbar 
-Plug 'Tagbar'
+Plug 'majutsushi/tagbar'
 
 " DSL and Programing languages
 Plug 'fatih/vim-go'
@@ -101,7 +102,7 @@ colorscheme molokai
 " vim-airline
 set laststatus=2
 " let g:airline_theme='badwolf'
-let g:airline_theme='molokai'
+" let g:airline_theme='molokai'
 let g:airline_detect_modified=1
  if !exists('g:airline_symbols')
    let g:airline_symbols = {}
