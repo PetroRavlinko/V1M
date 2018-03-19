@@ -11,6 +11,8 @@ call plug#begin(expand('~/.vim/bundle/'))
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tomasr/molokai'
+Plug 'chriskempson/base16-vim'
+Plug 'NLKNguyen/papercolor-theme'
 
 " NerdTree
 " Plug 'scrooloose/nerdtree',  { 'on':  'NERDTreeToggle' }
@@ -36,6 +38,8 @@ Plug 'fatih/vim-nginx' , {'for' : 'nginx'}
 Plug 'hashivim/vim-hashicorp-tools'
 Plug 'vim-scripts/c.vim'
 Plug 'mattn/emmet-vim/'
+Plug 'MikeCoder/markdown-preview.vim'
+Plug 'ingydotnet/yaml-vim'
 
 " Git utilities 
 Plug 'gregsexton/gitv' | Plug 'tpope/vim-fugitive'
@@ -95,9 +99,17 @@ filetype plugin indent on
  
 " BUNDLE CONFIGURATION
 " colorscheme molokai
-" colorscheme onehalflight
+" set background=light
+colorscheme PaperColor
 " hi light
 " set background
+let g:PaperColor_Theme_Options = {
+  \   'theme': {
+  \     'default': {
+  \       'transparent_background': 1
+  \     }
+  \   }
+  \ }
 
 " vim-airline
 set laststatus=2
@@ -147,6 +159,10 @@ let g:delimitMate_expand_space = 1
 let g:delimitMate_smart_quotes = 1    
 let g:delimitMate_expand_inside_quotes = 0    
 let g:delimitMate_smart_matchpairs = '^\%(\w\|\$\)'   
+
+" =================== Vim Markdown =================
+
+map <leader>m :MarkdownPreview GitHub<CR>
 
 imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 
