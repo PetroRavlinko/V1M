@@ -27,10 +27,25 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Tagbar 
 Plug 'majutsushi/tagbar'
 
-" DSL and Programing languages
+""""" DSL and Programing languages """"
+" Go
 Plug 'fatih/vim-go'
+
+" JS
 Plug 'pangloss/vim-javascript'
+
+" Python
 Plug 'hdima/python-syntax'
+
+" Ruby
+Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-haml'
+Plug 'skalnik/vim-vroom'
+
+" General 
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
 Plug 'elzr/vim-json', {'for' : 'json'}
 Plug 'fatih/vim-hclfmt'
@@ -99,7 +114,7 @@ filetype plugin indent on
  
 " BUNDLE CONFIGURATION
 " colorscheme molokai
-" set background=light
+set background=dark
 colorscheme PaperColor
 " hi light
 " set background
@@ -116,17 +131,17 @@ set laststatus=2
 " let g:airline_theme='badwolf'
 let g:airline_theme='molokai'
 let g:airline_detect_modified=1
- if !exists('g:airline_symbols')
-   let g:airline_symbols = {}
- endif
- let g:airline_symbols.space = "\ua0"
- let g:airline_left_sep = ''
- let g:airline_left_alt_sep = ''
- let g:airline_right_sep = ''
- let g:airline_right_alt_sep = ''
- let g:airline#extensions#tabline#enabled = 1
- let g:airline#extensions#tabline#left_sep = ' '
- let g:airline#extensions#tabline#left_alt_sep = '|'
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " open help vertically
 command! -nargs=* -complete=help Help vertical belowright help <args>
