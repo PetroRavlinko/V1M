@@ -1,19 +1,13 @@
-#!/usr/bin/env bash
+#!/usr/bin/env zsh
 
 # Backup vim
 if [[ -d '~/.vim' ]]; then
-  mv -f ~/.vim ~/.vim.previous
-fi
-if [[ -f '~/.vimrc' ]]; then
-  mv ~/.vimrc ~/.vimrc.previous
+	mv -f ~/.vim ~/.vim.orig
 fi
 
 # Setup vim  
 mkdir -v ~/.vim
-cp -v vimrc ~/.vim/vimrc
-cp -v vimrc.neovim ~/.vim/vimrc.neovim
+cp -vfr * ~/.vim
 
 # Install vim modules
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall
+vim +PlugInstall +UpdateRemotePlugins +qa
