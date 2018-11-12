@@ -30,24 +30,14 @@ if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
   endif
-
 endif
  
 filetype plugin indent on
  
 " BUNDLE CONFIGURATION
-" colorscheme molokai
 set background=dark
 colorscheme PaperColor
-" hi light
-" set background
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default': {
-  \       'transparent_background': 1
-  \     }
-  \   }
-  \ }
+let g:PaperColor_Theme_Options = { 'theme': { 'default': { 'transparent_background': 1 } } }
 
 " Change cursors mode depending on mode 
 autocmd InsertEnter * set cul

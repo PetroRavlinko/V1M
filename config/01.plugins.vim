@@ -40,8 +40,12 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'pangloss/vim-javascript'
 
 " Python
-Plug 'hdima/python-syntax'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'ryanolsonx/vim-lsp-python'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'Chiel92/vim-autoformat'
 
 " Ruby
 Plug 'tpope/vim-rails'
@@ -74,9 +78,9 @@ nmap ga <Plug>(EasyAlign)
 
 " JSON Tool
 Plug 'elzr/vim-json'
-Plug 'knt45/jq-wrapper.vim'
+Plug 'vito-c/jq.vim'
 
 " AWS
- Plug 'https://github.com/m-kat/aws-vim'
+Plug 'm-kat/aws-vim'
 
   call plug#end()
