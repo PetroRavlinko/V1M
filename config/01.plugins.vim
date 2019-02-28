@@ -38,6 +38,8 @@ Plug 'prabirshrestha/vim-lsp'
 
 " JS
 Plug 'pangloss/vim-javascript'
+Plug 'jbgutierrez/vim-babel'
+Plug 'posva/vim-vue'
 
 " Python
 Plug 'prabirshrestha/asyncomplete.vim'
