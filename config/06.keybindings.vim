@@ -32,12 +32,12 @@ map <C-H> <C-W>h
 
 " Normal mode mapping
 " Switch buffer
-nnoremap <TAB> :bn<CR>
-nnoremap <S-TAB> :bp<CR>
+nnoremap <leader><TAB> :bn<CR>
+nnoremap <leader><S-TAB> :bp<CR>
 
 " Switch tabs
-nnoremap <S-Left> :tabprevious<CR>
-nnoremap <S-Right> :tabnext<CR>
+nnoremap <TAB> :tabprevious<CR>
+nnoremap <S-TAB> :tabnext<CR>
 
 " ==================== CtrlP ====================
 let g:ctrlp_cmd = 'CtrlPMRU'
@@ -72,3 +72,5 @@ let g:lsp_signs_enabled = 1         " enable signs
 let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal mode
 let g:lsp_signs_error = {'text': '✗'}
 
+"============ Nerd Tree ================
+map <Leader>n :NERDTreeToggle<CR>

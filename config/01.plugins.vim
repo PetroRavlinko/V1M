@@ -74,9 +74,13 @@ nmap ga <Plug>(EasyAlign)
 
 " JSON Tool
 Plug 'elzr/vim-json'
-Plug 'knt45/jq-wrapper.vim'
+Plug 'bfrg/vim-jq'
+Plug 'bfrg/vim-jqplay'
 
 " AWS
- Plug 'https://github.com/m-kat/aws-vim'
+Plug 'https://github.com/m-kat/aws-vim'
 
-  call plug#end()
+" NerdTree
+Plug 'preservim/nerdtree'
+
+call plug#end()
