@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+pip istall pyls
+
 # Backup vim
 if [[ -d '~/.vim' ]]; then
 	mv -f ~/.vim ~/.vim.orig
