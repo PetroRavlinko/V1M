@@ -7,7 +7,7 @@ set rnu					                      " Relative line numbers
 set hidden
 set paste  
 set encoding=utf-8       		          " Set encoding to Unicode
-set guifont=Menlo\ Regular:h12 		    " Set GUI font size 
+" set guifont=Menlo\ Regular:h12 		    " Set GUI font size 
 set tabstop=2 shiftwidth=2 expandtab	" Ser fort tab for ruby
 set switchbuf=usetab
 set backspace=2				                " Allow backspacing  over everething including indent, eol in insert mode 
@@ -36,21 +36,23 @@ endif
 filetype plugin indent on
  
 " BUNDLE CONFIGURATION
-" colorscheme molokai
 set background=dark
-colorscheme PaperColor
+colorscheme nord
+" colorscheme PaperColor
 " hi light
 " set background
-let g:PaperColor_Theme_Options = {
-  \   'theme': {
-  \     'default': {
-  \       'transparent_background': 1
-  \     }
-  \   }
-  \ }
+" let g:PaperColor_Theme_Options = {
+"   \   'theme': {
+"   \     'default': {
+"   \       'transparent_background': 1
+"   \     }
+"   \   }
+"   \ }
 
 " Change cursors mode depending on mode 
 autocmd InsertEnter * set cul
 autocmd InsertLeave * set nocul
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+hi Normal guibg=NONE ctermbg=NONE 

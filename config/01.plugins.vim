@@ -10,6 +10,7 @@ call plug#begin(expand('~/.vim/bundle/'))
 " Visual effects 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'arcticicestudio/nord-vim'
 Plug 'tomasr/molokai'
 Plug 'chriskempson/base16-vim'
 Plug 'NLKNguyen/papercolor-theme'
@@ -42,14 +43,6 @@ Plug 'pangloss/vim-javascript'
 " Python
 Plug 'hdima/python-syntax'
 Plug 'ryanolsonx/vim-lsp-python'
-
-" Ruby
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-cucumber'
-Plug 'tpope/vim-haml'
-Plug 'skalnik/vim-vroom'
 
 " General 
 Plug 'ekalinin/Dockerfile.vim', {'for' : 'Dockerfile'}
